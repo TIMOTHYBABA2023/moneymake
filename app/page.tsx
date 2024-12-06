@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import logo from "@/public/assets/images/Logo 64.svg";
 import logo_40 from "@/public/assets/images/logo 40.svg";
@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col text-black items-center">
-      <nav className="hidden lg:flex items-center w-full justify-around mt-4 ">
+      <nav className="hidden lg:flex items-center w-full justify-around m-4 ">
         <div className="flex items-center gap-4 ">
           <Image src={logo} alt="logo" />
           <h1 className="font-bold text-2xl text-[#3538CD] ">MoneyMake</h1>
@@ -53,69 +53,93 @@ export default function Home() {
         </div>
       </nav>
 
-
       <nav className="flex lg:hidden flex-col bg-white items-center w-full justify-around py-2">
         <div className="flex flex-col w-full">
-        <div className="flex justify-around w-full items-center gap-10">
-        <div className="flex justify-around items-center gap-4">
-        <Image src={logo_40} alt="logo" />
-        <h1 className="font-semibold text-[16px] text-[#3538CD] ">MoneyMake</h1>
+          <div className="flex justify-around w-full items-center gap-10">
+            <div className="flex justify-around items-center gap-4">
+              <Image src={logo_40} alt="logo" />
+              <h1 className="font-semibold text-[16px] text-[#3538CD] ">
+                MoneyMake
+              </h1>
+            </div>
+
+            <div className="">
+              {!openNavItems && (
+                <Image
+                  src={burger_icon}
+                  alt="burger_icon"
+                  onClick={() => setOpenNavItems(!openNavItems)}
+                />
+              )}
+              {openNavItems && (
+                <Image
+                  src={close_icon}
+                  alt="close_icon"
+                  onClick={() => setOpenNavItems(!openNavItems)}
+                />
+              )}
+            </div>
+          </div>
         </div>
 
-          
-          <div className="">
-          {!openNavItems && <Image src={burger_icon} alt="burger_icon" onClick={() => setOpenNavItems(!openNavItems)} />}
-          {openNavItems && <Image src={close_icon} alt="close_icon"  onClick={() => setOpenNavItems(!openNavItems)}/>}
-
-        </div>
-        </div>
-        </div>
-        
-   {openNavItems &&      <div className="flex flex-col w-full text-[#101828] mx-4 my-[24px] p-8 bg-white gap-8 text-sm">
-          <a href="" className="hover:text-[#3538CD]">
-            Home
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
-            Features
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
-            About
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
-            Contact Us
-          </a>
-          <a href="" className="text-[#101828] text-sm hover:text-[#3538CD]">Login</a>
-          <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
-            Create an account
-          </button>
-        </div>}
-     
+        {openNavItems && (
+          <div className="flex flex-col w-full text-[#101828] mx-4 my-[24px] p-8 bg-white gap-8 text-sm">
+            <a href="" className="hover:text-[#3538CD]">
+              Home
+            </a>
+            <a href="" className="hover:text-[#3538CD]">
+              Features
+            </a>
+            <a href="" className="hover:text-[#3538CD]">
+              About
+            </a>
+            <a href="" className="hover:text-[#3538CD]">
+              Contact Us
+            </a>
+            <a href="" className="text-[#101828] text-sm hover:text-[#3538CD]">
+              Login
+            </a>
+            <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
+              Create an account
+            </button>
+          </div>
+        )}
       </nav>
 
-      <div className="flex flex-col lg:flex-row w-full h-[700px]">
-        <div className="flex flex-col w-full lg:w-[605px] gap-8 lg:ml-[100px] mt-8 p-4 lg:mt-[100px]">
-          <div className="flex   flex-col gap-1 lg:gap-8">
-            <h1 className="text-[#101828] font-bold text-[32px] lg:text-[58px] w-[90%] lg:width-[605px] leading-[44.8px] lg:leading-[81.2px] ">
-              Quick and easy payment platform for all you transactions
-            </h1>
-            <p className="text-[#667085] lg:w-[511px] text-sm lg:text-2xl ">
-              Save and manage all your transaction in one place, easy payment
-              anytime & anyday.
-            </p>
+<section className=" w-full">
+<div className="w-full flex flex-col items-center">
+        <div className="flex flex-col sm:w-[80%] xl:w-[90%] sm:items-center md:flex-row gap-10 xl:gap-[10%] w-[90%] mt-8 xl:m-[85px]">
+          <div className="flex flex-col md:w-[80%] xl:w-[51%] gap-4 md:gap-8">
+            <div className="flex flex-col gap-4">
+              <h1 className="text-[32px] md:text-[28px] lg:text-[40px] xl:text-[58px] xl:py-4 font-bold leading-[44.8px] xl:leading-[81.2px]">
+                Quick and easy payment platform for all your transactions
+              </h1>
+              <p className="text-sm md:w-[95%] lg:w-[80%] xl:w-[50%]">
+                Save and manage all your transaction in one place, easy payment
+                anytime & anyday.
+              </p>
+            </div>
+            <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 flex justify-center gap-4">
+            <span className="text-white text-sm font-semibold">
+              Create an account
+            </span>
+            </div>
           </div>
-          <button className="bg-[#3538CD] lg:w-[178px] text-white text-sm font-semibold rounded-md py-3 px-4">
-            Create an account
-          </button>
-        </div>
-        <div className="flex justify-center items-center w-[90%] mt-10 lg:mt-[85px] lg:ml-[109px]">
-          <Image src={man_image} alt="man_image" />
+          <div className="">
+            <Image src={man_image} alt="man_image"/>
+          </div>
         </div>
       </div>
 
-      <section className="mt-[80px] w-full bg-white h-[494px] flex flex-col lg:flex-row lg:justify-center lg:items-center">
-        <div className="flex flex-col lg:flex-row lg:justify-center p-4 lg:mt-[80px] lg:gap-[230px]">
-          <div className=" lg:w-[416px] lg:self-center ">
-            <p className="w-[90%] leading-[33.6px] lg:leading-[56px] text-2xl lg:text-[40px] text-[#3538CD] font-bold ">
+</section>
+
+      
+
+      <section className="w-full">
+      <div className="mt-[80px] w-full bg-white flex flex-col md:flex-row md:justify-center md:items-center">
+        <div className="w-[90%] flex flex-col md:flex-row lg:justify-center p-4 lg:mt-[80px] lg:gap-[230px]">
+          <div className=" ">
+            <p className="leading-[33.6px] lg:leading-[56px] text-2xl lg:text-[40px] text-[#3538CD] font-bold ">
               Get the convenience of transacting with our services
             </p>
             <p className="text-sm lg:text-[16px]">
@@ -123,7 +147,8 @@ export default function Home() {
               eget ipsum, sed praesent.
             </p>
           </div>
-          <div className=" flex flex-col lg:h-[343px] lg:gap-[30px] justify-between">
+          <div className="flex flex-col w-[80%]">
+          <div className=" flex flex-col lg:h-[343px] lg:gap-[30px] justify-center items-center">
             <div className="lg:w-[438px] h-[152px] flex gap-[100px]">
               <div className="flex flex-col justify-center items-center w-[167px] gap-[5px] lg:gap-4">
                 <Image src={keeping_secrecy} alt="keeping secret image" />
@@ -157,9 +182,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </div>
+      </div>
       </section>
-
+{/*
       <section className="w-full lg:h-[430px] text-white bg-[#101828] ">
         <div className="w-full flex flex-col-reverse lg:flex-row lg:justify-center items-center lg:mt-[80px] lg:mx-[152px] lg:h-[270px]">
           <div className="w-[90%] py-4 h-full lg:w-[512px] ">
@@ -359,7 +386,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col items-end gap-[31px] lg:w-[137px] p-4">
+        <div className="flex flex-col lg:items-end gap-[31px] lg:w-[137px] p-4">
           <div className="flex  gap-2">
             <Image src={facebook} alt="facebook" />
             <Image src={twitter} alt="twitter" />
@@ -370,7 +397,7 @@ export default function Home() {
           </div>
         </div>
        
-      </footer>
+      </footer> */}
     </div>
   );
 }
