@@ -1,6 +1,7 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
-import logo from "@/public/assets/images/Logo 64.svg";
+import logo from "@/public/assets/images/Logo.svg";
 import logo_40 from "@/public/assets/images/logo 40.svg";
 import man_image from "@/public/assets/images/guy_image.svg";
 import keeping_secrecy from "@/public/assets/images/keeping secrecy.svg";
@@ -17,7 +18,6 @@ import linkedin from "@/public/assets/images/linkedin.svg";
 import google from "@/public/assets/images/google.svg";
 import burger_icon from "@/public/assets/images/burger_icon.svg";
 import close_icon from "@/public/assets/images/close_icon.svg";
-import { useState } from "react";
 
 export default function Home() {
   const [openNavItems, setOpenNavItems] = useState(false);
@@ -52,7 +52,6 @@ export default function Home() {
           </button>
         </div>
       </nav>
-
       <nav className="flex lg:hidden flex-col bg-white items-center w-full justify-around py-2">
         <div className="flex flex-col w-full">
           <div className="flex justify-around w-full items-center gap-10">
@@ -105,7 +104,6 @@ export default function Home() {
           </div>
         )}
       </nav>
-
 <section className=" w-full">
 <div className="w-full flex flex-col items-center">
         <div className="flex flex-col sm:w-[80%] xl:w-[90%] sm:items-center md:flex-row gap-10 xl:gap-[10%] w-[90%] mt-8 xl:m-[85px]">
@@ -119,7 +117,7 @@ export default function Home() {
                 anytime & anyday.
               </p>
             </div>
-            <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 flex justify-center gap-4">
+            <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
             <span className="text-white text-sm font-semibold">
               Create an account
             </span>
@@ -133,67 +131,68 @@ export default function Home() {
 
 </section>
 
-      
-
       <section className="w-full">
-      <div className="mt-[80px] w-full bg-white flex flex-col md:flex-row md:justify-center md:items-center">
-        <div className="w-[90%] flex flex-col md:flex-row lg:justify-center p-4 lg:mt-[80px] lg:gap-[230px]">
-          <div className=" ">
-            <p className="leading-[33.6px] lg:leading-[56px] text-2xl lg:text-[40px] text-[#3538CD] font-bold ">
+      <div className="bg-white flex flex-col items-center">
+        <div className="py-8 flex flex-col items-center gap-8">
+          <div className="flex flex-col w-[95%]">
+            <p className="w-[90%] leading-[33.6px] lg:leading-[56px] flex text-2xl sm:text-center md:text-left lg:text-[40px] text-[#3538CD] font-bold ">
               Get the convenience of transacting with our services
             </p>
-            <p className="text-sm lg:text-[16px]">
+            <p className=" text-[14px] flex flex-wrap lg:text-[16px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
               eget ipsum, sed praesent.
             </p>
           </div>
-          <div className="flex flex-col w-[80%]">
-          <div className=" flex flex-col lg:h-[343px] lg:gap-[30px] justify-center items-center">
-            <div className="lg:w-[438px] h-[152px] flex gap-[100px]">
-              <div className="flex flex-col justify-center items-center w-[167px] gap-[5px] lg:gap-4">
-                <Image src={keeping_secrecy} alt="keeping secret image" />
-                <p className="text-center">
-                  Keeping <br /> secrecy
-                </p>
+          <div className="flex flex-col w-full justify-center items-center">
+            <div className="flex flex-col gap-2 w-full text-sm items-center">
+              <div className="flex flex-wrap justify-around w-full">
+                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                  <Image src={keeping_secrecy} alt="keeping secret image" />
+                  <p className="text-center">
+                    Keeping <br /> secrecy
+                  </p>
+                </div>
+                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                  <Image
+                    src={convenient_transaction}
+                    alt="keeping secret image"
+                  />
+                  <p className="text-center ">
+                    Convenient <br /> transaction
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-[171px] gap-[5px] lg:gap-4">
-                <Image
-                  src={convenient_transaction}
-                  alt="keeping secret image"
-                />
-                <p className="text-center ">
-                  Convenient <br /> transaction
-                </p>
-              </div>
-            </div>
-            <div className="lg:w-[438px] h-[152px] flex gap-[100px]">
-              <div className="flex flex-col items-center justify-center w-[167px] gap-[5px] lg:gap-4">
-                <Image src={free_transaction} alt="keeping secret image" />
-                <p className="text-center ">
+              <div className="flex flex-wrap justify-around w-full">
+                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                  <Image src={keeping_secrecy} alt="keeping secret image" />
+                  <p className="text-center">
                   Free <br /> transaction
-                </p>
-              </div>
-              <div className="flex flex-col justify-center items-center w-[171px] gap-[5px] lg:gap-4">
-                <Image src={security_guaranteed} alt="keeping secret image" />
-                <p className="text-center">
+                  </p>
+                </div>
+                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                  <Image
+                    src={convenient_transaction}
+                    alt="keeping secret image"
+                  />
+                  <p className="text-center ">
                   Security <br />
                   guaranteed
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
       </section>
-{/*
-      <section className="w-full lg:h-[430px] text-white bg-[#101828] ">
-        <div className="w-full flex flex-col-reverse lg:flex-row lg:justify-center items-center lg:mt-[80px] lg:mx-[152px] lg:h-[270px]">
-          <div className="w-[90%] py-4 h-full lg:w-[512px] ">
-            <Image src={card_cash} alt="card_cash" />
+
+      <section className="w-full text-white bg-[#101828] ">
+        <div className="w-full lg:w-[90%] flex flex-col-reverse lg:flex-row lg:justify-center items-center pt-8 lg:gap-[10%]">
+          <div className="w-[90%] flex justify-center items-center xl:w-[512px] xl:w-[50%] ">
+            <Image src={card_cash} alt="card_cash"/>
           </div>
-          <div className="w-[90%] lg:w-[445px] pt-10  gap-2">
-            <h1 className="font-bold text-2xl lg:text-[40px] leading-[33.6px] lg:leading-[56px]  lg:h-[112px] ">
+          <div className="w-[90%] lg:w-[60%] xl:w-[445px] md:text-center  gap-2">
+            <h1 className="font-bold text-2xl lg:text-[30px] xl:text-[40px] leading-[33.6px] xl:leading-[56px] lg:pb-4">
               Choose how you want to make transfers
             </h1>
             <p className="text-sm leading-5">
@@ -204,14 +203,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="lg:h-[829px] w-full">
-        <div className="flex flex-col lg:flex-row items-center lg:h-[669px] lg:my-[80px] lg:mx-[100px] lg:gap-[196px]">
-          <div className="flex flex-col w-[90%] lg:w-[502px] lg:h-[554px] gap-8 mt-6 lg:gap-12">
+
+      <section className="w-full">
+        <div className="flex flex-col lg:flex-row items-center lg:px-[5%] lg:my-[40px] lg:gap-[5%]">
+          <div className="flex flex-col w-[95%] md:w-[70%]  gap-8 mt-6 lg:gap-12">
             <div className="w-full">
-              <h2 className="font-bold text-2xl lg:text-[40px] text-[#3538CD] leading-[33.6px] lg:leading-[56px]">
+              <h2 className="font-bold text-2xl md:text-[30px] lg:text-[40px] text-[#3538CD] leading-[33.6px] lg:leading-[56px]">
                 How it works
               </h2>
-              <p className="text-sm text-[#012A4A]">
+              <p className="text-sm text-[#012A4A] lg:w-[75%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
                 eget ipsum, sed praesent.
               </p>
@@ -255,14 +255,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[80%] py-6">
+          <div className="w-[80%] md:flex py-6 md:justify-center">
             <Image src={lady_image} alt="lady_image" />{" "}
           </div>
         </div>
       </section>
-      
+  
       <section className="flex flex-col bg-white w-full">
-        <div className="flex flex-col items-center lg:gap-12 lg:h-[556px] lg:my-[60px] lg:mx-[100px]">
+        <div className="flex flex-col items-center lg:gap-12 lg:my-[60px] lg:mx-[100px]">
           <div className="flex flex-col items-center w-[90%] gap-2 lg:w-[594px]">
             <h1 className="text-[#3538CD] font-bold text-2xl lg:text-[40px] leading-[33.6px] lg:leading-[56px]">
               Hear from our customers
@@ -272,20 +272,20 @@ export default function Home() {
               eget ipsum, sed praesent.
             </p>
           </div>
-          <div className="flex flex-col items-center lg:flex-row flex-wrap py-6 gap-8">
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+          <div className="flex flex-col w-[90%] items-center lg:flex-row flex-wrap py-6 gap-8">
+              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm lg:self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <div className="max-w-[343px] flex flex-col flex-wrap gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -293,28 +293,30 @@ export default function Home() {
               </div>
             
             
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
-              <div className="w-[90%] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
                 <p className="font-semibold">Adekola Johnson</p>
                 <p className="text-sm self-center text-[#012A4A]">
                 Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
+                </p> 
               </div>
           </div>
         </div>
       </section>
 
+
+   {/* 
 
       <section className="h-[388px] lg:h-[431px] w-full bg-[#3538CD] flex flex-col justify-center items-center gap-8">
         <div className="flex flex-col gap-12 w-[90%] lg:w-[573px]">
