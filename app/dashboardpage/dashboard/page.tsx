@@ -130,7 +130,7 @@ const Dashboard: React.FC = () => {
               <div className="flex items-center gap-2">
                 <div className="flex flex-col items-end">
                   <p className="text-[#98A2B3] text-sm">4/11/2022 <span>4:46PM</span></p>
-                  <p className="text-[#34A853] text-sm">&#x20A6;2,000.00</p>
+                  <p className="text-[#34A853] text-sm">&#x20A6;2,500.00</p>
                 </div>
                 <div>
                   <Image src={arrowdown_icon} alt="arrowdown_icon" />
