@@ -133,9 +133,9 @@ export default function Home() {
 
       <section className="w-full">
       <div className="bg-white flex flex-col items-center">
-        <div className="py-8 flex flex-col items-center gap-8">
-          <div className="flex flex-col w-[95%]">
-            <p className="w-[90%] leading-[33.6px] lg:leading-[56px] flex text-2xl sm:text-center md:text-left lg:text-[40px] text-[#3538CD] font-bold ">
+        <div className="py-8 flex flex-col md:flex-row md:w-[90%] items-center gap-8">
+          <div className="flex flex-col w-[95%] md:w-[70%] gap-8">
+            <p className="w-[90%] md:w-[100%] leading-[33.6px] lg:leading-[56px] flex text-2xl md:text-[32px] sm:text-center md:text-left lg:text-[40px] text-[#3538CD] font-bold ">
               Get the convenience of transacting with our services
             </p>
             <p className=" text-[14px] flex flex-wrap lg:text-[16px]">
@@ -164,15 +164,15 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap justify-around w-full">
                 <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
-                  <Image src={keeping_secrecy} alt="keeping secret image" />
+                  <Image src={free_transaction} alt="free_transaction image" />
                   <p className="text-center">
                   Free <br /> transaction
                   </p>
                 </div>
                 <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
                   <Image
-                    src={convenient_transaction}
-                    alt="keeping secret image"
+                    src={security_guaranteed}
+                    alt="security_guaranteed image"
                   />
                   <p className="text-center ">
                   Security <br />
@@ -315,22 +315,19 @@ export default function Home() {
         </div>
       </section>
 
-
-   {/* 
-
-      <section className="h-[388px] lg:h-[431px] w-full bg-[#3538CD] flex flex-col justify-center items-center gap-8">
+      <section className="lg:h-[431px] w-full bg-[#3538CD] p-8 flex flex-col justify-center items-center gap-8">
         <div className="flex flex-col gap-12 w-[90%] lg:w-[573px]">
           <div className="text-white text-center flex flex-col gap-8">
             <h1 className="text-2xl leading-[33.6px] lg:text-[40px] font-bold lg:leading-[56px]">
               Subscribe on our Newsletter
             </h1>
-            <p className="text-sm ">
+            <p className="text-sm sm:w-[60%] lg:w-full self-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus in
               orci quis eleifend id. Adipiscing cras scelerisque aliquet nisi,
               velit, aliquam tortor vestibulum.
             </p>
           </div>
-          <div className="flex gap-1">
+          <div className="flex justify-center gap-1">
             <div className="flex bg-white border px-4 py-3 rounded-md gap-2 w-[383px]">
               <Image src={email_icon} alt="Email_icon" />
               <input
@@ -350,16 +347,18 @@ export default function Home() {
       </section>
 
 
-      <footer className="w-full h-[612px] lg:h-[261px] bg-[#101828] text-white flex flex-col lg:justify-center lg:flex-row lg:items-center lg:px-[100px] lg:gap-[228px]">
-        <div className="flex flex-col gap-[15px] p-4">
+<footer className="w-full ">
+  <div className="">
+        <div className="bg-[#101828] text-white flex flex-col lg:justify-center lg:flex-row lg:items-center lg:gap-[10%] py-8">
+        <div className="flex flex-col sm:items-center gap-[15px] p-4">
           <div className="flex gap-4 items-center">
             <Image src={white_logo} alt="white_logo" />
             <h1 className="font-bold text-2xl leading-[33.6px]">MoneyMake</h1>
           </div>
           <div className="text-sm">© 2022 All rights reserved</div>
         </div>
-        <div className="flex flex-col lg:gap-[35px] lg:w-[388px] text-sm lg:items-center p-4">
-          <div className="flex flex-col lg:flex-row justify-around lg:w-[331px] gap-6">
+        <div className="flex flex-col sm:items-center lg:gap-[35px] text-sm lg:items-center p-4">
+          <div className="flex flex-col lg:flex-row sm:items-center justify-around gap-6">
             <a href="" className="">
               Home
             </a>
@@ -373,7 +372,7 @@ export default function Home() {
               Contact Us
             </a>
           </div>
-          <div className="flex flex-col lg:flex-row lg:w-[388px] justify-around mt-4 gap-6">
+          <div className="flex flex-col sm:items-center lg:flex-row lg:w-[388px] justify-around mt-4 gap-6">
             <a href="" className="">
               Privacy Policy
             </a>
@@ -388,7 +387,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col lg:items-end gap-[31px] lg:w-[137px] p-4">
+        <div className="flex flex-col sm:items-center lg:items-end gap-[31px] lg:w-[137px] p-4">
           <div className="flex  gap-2">
             <Image src={facebook} alt="facebook" />
             <Image src={twitter} alt="twitter" />
@@ -399,7 +398,9 @@ export default function Home() {
           </div>
         </div>
        
-      </footer> */}
+        </div>
+  </div>
+</footer>
     </div>
   );
 }
