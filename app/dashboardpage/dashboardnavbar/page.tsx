@@ -17,17 +17,9 @@ import Shield_exclamation from "@/public/assets/images/shield-exclamation.svg";
 import Contact_account_icon from "@/public/assets/images/contact_account icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
-type NavbarProps = {
-  activeSection: string;
-  setActiveSection: (
-    section:
-      | "dashboard"
-      | "airtime"
-      | "transfer"
-      | "wallet"
-      | "payment"
-      | "notification"
-  ) => void;
+export type NavbarProps = {
+  activeSection: "dashboard" | "airtime" | "transfer" | "wallet" | "payment" | "notification";
+  setActiveSection: (section: NavbarProps["activeSection"]) => void;
 };
 
 const Navbar: React.FC<NavbarProps> = ({
