@@ -18,15 +18,15 @@ import linkedin from "@/public/assets/images/linkedin.svg";
 import google from "@/public/assets/images/google.svg";
 import burger_icon from "@/public/assets/images/burger_icon.svg";
 import close_icon from "@/public/assets/images/close_icon.svg";
-import Transactiondetailsmodal from "@/public/components/Transactiondetailsmodal";
-import Logoutmodal from "@/public/components/LogoutModal";
+
+
 
 export default function Home() {
   const [openNavItems, setOpenNavItems] = useState(false);
 
   return (
     <div className="flex flex-col items-center">
-      {/* <nav className="hidden lg:flex items-center w-full justify-around m-4 ">
+      <nav className="hidden lg:flex items-center w-full justify-around m-4 ">
         <div className="flex items-center gap-4 ">
           <Image src={logo} alt="logo" />
           <h1 className="font-bold text-2xl text-[#3538CD] ">MoneyMake</h1>
@@ -106,92 +106,94 @@ export default function Home() {
           </div>
         )}
       </nav>
-<section className=" w-full">
-<div className="w-full flex flex-col items-center">
-        <div className="flex flex-col sm:w-[80%] xl:w-[90%] sm:items-center md:flex-row gap-10 xl:gap-[10%] w-[90%] mt-8 xl:m-[85px]">
-          <div className="flex flex-col md:w-[80%] xl:w-[51%] gap-4 md:gap-8">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-[32px] md:text-[28px] lg:text-[40px] xl:text-[58px] xl:py-4 font-bold leading-[44.8px] xl:leading-[81.2px]">
-                Quick and easy payment platform for all your transactions
-              </h1>
-              <p className="text-sm md:w-[95%] lg:w-[80%] xl:w-[50%]">
-                Save and manage all your transaction in one place, easy payment
-                anytime & anyday.
-              </p>
+      <section className=" w-full">
+        <div className="w-full flex flex-col items-center">
+          <div className="flex flex-col sm:w-[80%] xl:w-[90%] sm:items-center md:flex-row gap-10 xl:gap-[10%] w-[90%] mt-8 xl:m-[85px]">
+            <div className="flex flex-col md:w-[80%] xl:w-[51%] gap-4 md:gap-8">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-[32px] md:text-[28px] lg:text-[40px] xl:text-[58px] xl:py-4 font-bold leading-[44.8px] xl:leading-[81.2px]">
+                  Quick and easy payment platform for all your transactions
+                </h1>
+                <p className="text-sm md:w-[95%] lg:w-[80%] xl:w-[50%]">
+                  Save and manage all your transaction in one place, easy
+                  payment anytime & anyday.
+                </p>
+              </div>
+              <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
+                <span className="text-white text-sm font-semibold">
+                  Create an account
+                </span>
+              </div>
             </div>
-            <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
-            <span className="text-white text-sm font-semibold">
-              Create an account
-            </span>
+            <div className="">
+              <Image src={man_image} alt="man_image" />
             </div>
-          </div>
-          <div className="">
-            <Image src={man_image} alt="man_image"/>
           </div>
         </div>
-      </div>
-
-</section>
+      </section>
 
       <section className="w-full">
-      <div className="bg-white flex flex-col items-center">
-        <div className="py-8 flex flex-col md:flex-row md:w-[90%] items-center gap-8">
-          <div className="flex flex-col w-[95%] md:w-[70%] gap-8">
-            <p className="w-[90%] md:w-[100%] leading-[33.6px] lg:leading-[56px] flex text-2xl md:text-[32px] sm:text-center md:text-left lg:text-[40px] text-[#3538CD] font-bold ">
-              Get the convenience of transacting with our services
-            </p>
-            <p className=" text-[14px] flex flex-wrap lg:text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
-              eget ipsum, sed praesent.
-            </p>
-          </div>
-          <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col gap-2 w-full text-sm items-center">
-              <div className="flex flex-wrap justify-around w-full">
-                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
-                  <Image src={keeping_secrecy} alt="keeping secret image" />
-                  <p className="text-center">
-                    Keeping <br /> secrecy
-                  </p>
+        <div className="bg-white flex flex-col items-center">
+          <div className="py-8 flex flex-col md:flex-row md:w-[90%] items-center gap-8">
+            <div className="flex flex-col w-[95%] md:w-[70%] gap-8">
+              <p className="w-[90%] md:w-[100%] leading-[33.6px] lg:leading-[56px] flex text-2xl md:text-[32px] sm:text-center md:text-left lg:text-[40px] text-[#3538CD] font-bold ">
+                Get the convenience of transacting with our services
+              </p>
+              <p className=" text-[14px] flex flex-wrap lg:text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
+                eget ipsum, sed praesent.
+              </p>
+            </div>
+            <div className="flex flex-col w-full justify-center items-center">
+              <div className="flex flex-col gap-2 w-full text-sm items-center">
+                <div className="flex flex-wrap justify-around w-full">
+                  <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                    <Image src={keeping_secrecy} alt="keeping secret image" />
+                    <p className="text-center">
+                      Keeping <br /> secrecy
+                    </p>
+                  </div>
+                  <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                    <Image
+                      src={convenient_transaction}
+                      alt="keeping secret image"
+                    />
+                    <p className="text-center ">
+                      Convenient <br /> transaction
+                    </p>
+                  </div>
                 </div>
-                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
-                  <Image
-                    src={convenient_transaction}
-                    alt="keeping secret image"
-                  />
-                  <p className="text-center ">
-                    Convenient <br /> transaction
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap justify-around w-full">
-                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
-                  <Image src={free_transaction} alt="free_transaction image" />
-                  <p className="text-center">
-                  Free <br /> transaction
-                  </p>
-                </div>
-                <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
-                  <Image
-                    src={security_guaranteed}
-                    alt="security_guaranteed image"
-                  />
-                  <p className="text-center ">
-                  Security <br />
-                  guaranteed
-                  </p>
+                <div className="flex flex-wrap justify-around w-full">
+                  <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                    <Image
+                      src={free_transaction}
+                      alt="free_transaction image"
+                    />
+                    <p className="text-center">
+                      Free <br /> transaction
+                    </p>
+                  </div>
+                  <div className="min-w-[167px] h-[152px] p-8 flex flex-col items-center lg:gap-4">
+                    <Image
+                      src={security_guaranteed}
+                      alt="security_guaranteed image"
+                    />
+                    <p className="text-center ">
+                      Security <br />
+                      guaranteed
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
 
       <section className="w-full text-white bg-[#101828] ">
         <div className="w-full lg:w-[90%] flex flex-col-reverse lg:flex-row lg:justify-center items-center pt-8 lg:gap-[10%]">
           <div className="w-[90%] flex justify-center items-center xl:w-[512px] xl:w-[50%] ">
-            <Image src={card_cash} alt="card_cash"/>
+            <Image src={card_cash} alt="card_cash" />
           </div>
           <div className="w-[90%] lg:w-[60%] xl:w-[445px] md:text-center  gap-2">
             <h1 className="font-bold text-2xl lg:text-[30px] xl:text-[40px] leading-[33.6px] xl:leading-[56px] lg:pb-4">
@@ -204,7 +206,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="w-full">
         <div className="flex flex-col lg:flex-row items-center lg:px-[5%] lg:my-[40px] lg:gap-[5%]">
@@ -262,7 +263,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-  
+
       <section className="flex flex-col bg-white w-full">
         <div className="flex flex-col items-center lg:gap-12 lg:my-[60px] lg:mx-[100px]">
           <div className="flex flex-col items-center w-[90%] gap-2 lg:w-[594px]">
@@ -275,44 +276,55 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col w-[90%] items-center lg:flex-row flex-wrap py-6 gap-8">
-              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm lg:self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div className="max-w-[343px] flex flex-col flex-wrap gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-            
-            
-              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-              </div>
-              <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
-                <p className="font-semibold">Adekola Johnson</p>
-                <p className="text-sm self-center text-[#012A4A]">
-                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit. Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p> 
-              </div>
+            <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm lg:self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
+            <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
+            <div className="max-w-[343px] flex flex-col flex-wrap gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
+
+            <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
+            <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
+            <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
+              <p className="font-semibold">Adekola Johnson</p>
+              <p className="text-sm self-center text-[#012A4A]">
+                Lorem ipsum dolor sit amet, consectetur elit adipiscing elit.
+                Feugiat eget ipsum, sed ipsum praesent. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -348,64 +360,60 @@ export default function Home() {
         </p>
       </section>
 
-
-<footer className="w-full ">
-  <div className="">
-        <div className="bg-[#101828] text-white flex flex-col lg:justify-center lg:flex-row lg:items-center lg:gap-[10%] py-8">
-        <div className="flex flex-col sm:items-center gap-[15px] p-4">
-          <div className="flex gap-4 items-center">
-            <Image src={white_logo} alt="white_logo" />
-            <h1 className="font-bold text-2xl leading-[33.6px]">MoneyMake</h1>
+      <footer className="w-full ">
+        <div className="">
+          <div className="bg-[#101828] text-white flex flex-col lg:justify-center lg:flex-row lg:items-center lg:gap-[10%] py-8">
+            <div className="flex flex-col sm:items-center gap-[15px] p-4">
+              <div className="flex gap-4 items-center">
+                <Image src={white_logo} alt="white_logo" />
+                <h1 className="font-bold text-2xl leading-[33.6px]">
+                  MoneyMake
+                </h1>
+              </div>
+              <div className="text-sm">© 2022 All rights reserved</div>
+            </div>
+            <div className="flex flex-col sm:items-center lg:gap-[35px] text-sm lg:items-center p-4">
+              <div className="flex flex-col lg:flex-row sm:items-center justify-around gap-6">
+                <a href="" className="">
+                  Home
+                </a>
+                <a href="" className="">
+                  About Us
+                </a>
+                <a href="" className="">
+                  Features
+                </a>
+                <a href="" className="">
+                  Contact Us
+                </a>
+              </div>
+              <div className="flex flex-col sm:items-center lg:flex-row lg:w-[388px] justify-around mt-4 gap-6">
+                <a href="" className="">
+                  Privacy Policy
+                </a>
+                <a href="" className="">
+                  Terms of conditions
+                </a>
+                <a href="" className="">
+                  Legal
+                </a>
+                <a href="" className="">
+                  Help
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col sm:items-center lg:items-end gap-[31px] lg:w-[137px] p-4">
+              <div className="flex  gap-2">
+                <Image src={facebook} alt="facebook" />
+                <Image src={twitter} alt="twitter" />
+                <Image src={linkedin} alt="linkedin" />
+                <Image src={google} alt="google" />
+              </div>
+              <div className="text-sm">English version</div>
+            </div>
           </div>
-          <div className="text-sm">© 2022 All rights reserved</div>
         </div>
-        <div className="flex flex-col sm:items-center lg:gap-[35px] text-sm lg:items-center p-4">
-          <div className="flex flex-col lg:flex-row sm:items-center justify-around gap-6">
-            <a href="" className="">
-              Home
-            </a>
-            <a href="" className="">
-              About Us
-            </a>
-            <a href="" className="">
-              Features
-            </a>
-            <a href="" className="">
-              Contact Us
-            </a>
-          </div>
-          <div className="flex flex-col sm:items-center lg:flex-row lg:w-[388px] justify-around mt-4 gap-6">
-            <a href="" className="">
-              Privacy Policy
-            </a>
-            <a href="" className="">
-              Terms of conditions
-            </a>
-            <a href="" className="">
-              Legal
-            </a>
-            <a href="" className="">
-              Help
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col sm:items-center lg:items-end gap-[31px] lg:w-[137px] p-4">
-          <div className="flex  gap-2">
-            <Image src={facebook} alt="facebook" />
-            <Image src={twitter} alt="twitter" />
-            <Image src={linkedin} alt="linkedin" />
-            <Image src={google} alt="google" />
-          </div>
-          <div className="text-sm">English version
-          </div>
-        </div>
-       
-        </div>
-  </div>
-</footer> */}
-{/* <Transactiondetailsmodal /> */}
-<Logoutmodal />
-
+      </footer>
     </div>
   );
 }
