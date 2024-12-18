@@ -18,13 +18,15 @@ import linkedin from "@/public/assets/images/linkedin.svg";
 import google from "@/public/assets/images/google.svg";
 import burger_icon from "@/public/assets/images/burger_icon.svg";
 import close_icon from "@/public/assets/images/close_icon.svg";
+import Transactiondetailsmodal from "@/public/components/Transactiondetailsmodal";
+import Logoutmodal from "@/public/components/LogoutModal";
 
 export default function Home() {
   const [openNavItems, setOpenNavItems] = useState(false);
 
   return (
-    <div className="flex flex-col text-black items-center">
-      <nav className="hidden lg:flex items-center w-full justify-around m-4 ">
+    <div className="flex flex-col items-center">
+      {/* <nav className="hidden lg:flex items-center w-full justify-around m-4 ">
         <div className="flex items-center gap-4 ">
           <Image src={logo} alt="logo" />
           <h1 className="font-bold text-2xl text-[#3538CD] ">MoneyMake</h1>
@@ -400,7 +402,10 @@ export default function Home() {
        
         </div>
   </div>
-</footer>
+</footer> */}
+{/* <Transactiondetailsmodal /> */}
+<Logoutmodal />
+
     </div>
   );
 }

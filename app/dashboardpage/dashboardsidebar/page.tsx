@@ -9,10 +9,8 @@ import Payment_icon from "@/public/assets/images/payment icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
 type SidebarProps = {
-  activeSection: string;
-  setActiveSection: (
-    section: "dashboard" | "transfer" | "wallet" | "payment"
-  ) => void;
+  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification";
+  setActiveSection: (section: SidebarProps["activeSection"]) => void;
 };
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -33,7 +31,9 @@ const Sidebar: React.FC<SidebarProps> = ({
         <nav className="">
           <ul className="flex flex-col gap-4">
             <li
-              onClick={() => setActiveSection("dashboard")}
+              onClick={() => {
+                setActiveSection("dashboard")
+              }}
               className={`flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                 activeSection === "dashboard"
                   ? "bg-blue-500 text-white"

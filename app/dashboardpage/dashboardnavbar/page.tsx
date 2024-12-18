@@ -17,7 +17,7 @@ import Shield_exclamation from "@/public/assets/images/shield-exclamation.svg";
 import Contact_account_icon from "@/public/assets/images/contact_account icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
-type SidebarProps = {
+type NavbarProps = {
   activeSection: string;
   setActiveSection: (
     section:
@@ -30,14 +30,13 @@ type SidebarProps = {
   ) => void;
 };
 
-const Navbar: React.FC<SidebarProps> = ({
+const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   setActiveSection,
 }) => {
   const [openNavItems, setOpenNavItems] = useState(false);
   const [hideProfileModal, setHideProfileModal] = useState(false);
 
-  console.log(activeSection);
   return (
     <div className="w-full bg-white">
       <nav className="lg:flex items-center w-full justify-between">
@@ -90,7 +89,9 @@ const Navbar: React.FC<SidebarProps> = ({
             <nav className="flex flex-col gap-8">
               <ul className="flex flex-col gap-4">
                 <li
-                  onClick={() => setActiveSection("dashboard")}
+                  onClick={() => {setActiveSection("dashboard")
+                    setOpenNavItems(!openNavItems)}
+                  }
                   className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                     activeSection === "dashboard"
                       ? "bg-blue-500 text-white"
@@ -112,7 +113,9 @@ const Navbar: React.FC<SidebarProps> = ({
                   <p>Buy Airtime</p>
                 </li>
                 <li
-                  onClick={() => setActiveSection("payment")}
+                  onClick={() => {setActiveSection("payment")
+                    setOpenNavItems(!openNavItems)}
+                  }
                   className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                     activeSection === "payment"
                       ? "bg-blue-500 text-white"
@@ -123,7 +126,9 @@ const Navbar: React.FC<SidebarProps> = ({
                   <p>Pay Bill</p>
                 </li>
                 <li
-                  onClick={() => setActiveSection("transfer")}
+                  onClick={() => {setActiveSection("transfer")
+                    setOpenNavItems(!openNavItems)
+                  }}
                   className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                     activeSection === "transfer"
                       ? "bg-blue-500 text-white"
@@ -134,7 +139,9 @@ const Navbar: React.FC<SidebarProps> = ({
                   <p>Transfer</p>
                 </li>
                 <li
-                  onClick={() => setActiveSection("wallet")}
+                  onClick={() => {setActiveSection("wallet")
+                    setOpenNavItems(!openNavItems)
+                  }}
                   className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                     activeSection === "wallet"
                       ? "bg-blue-500 text-white"
@@ -145,7 +152,9 @@ const Navbar: React.FC<SidebarProps> = ({
                   <p>Fund Wallet</p>
                 </li>
                 <li
-                  onClick={() => setActiveSection("notification")}
+                  onClick={() => {setActiveSection("notification")
+                    setOpenNavItems(!openNavItems)
+                  }}
                   className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
                     activeSection === "notification"
                       ? "bg-blue-500 text-white"
