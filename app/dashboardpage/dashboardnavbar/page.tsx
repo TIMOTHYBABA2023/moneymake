@@ -17,8 +17,9 @@ import Shield_exclamation from "@/public/assets/images/shield-exclamation.svg";
 import Contact_account_icon from "@/public/assets/images/contact_account icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
+
 type SidebarProps = {
-  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification" | "notification";
+  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification";
   setActiveSection: (section: SidebarProps["activeSection"]) => void;
 };
 
