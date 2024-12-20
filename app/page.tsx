@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex gap-8"></div>
 
         <div className="hidden lg:flex justify-between text-[#101828] gap-8 text-sm">
-          <a href="" className="hover:text-[#3538CD]">
+          <a href="/" className="hover:text-[#3538CD]">
             Home
           </a>
           <a href="" className="hover:text-[#3538CD]">
@@ -48,9 +48,10 @@ export default function Home() {
           </a>
         </div>
         <div className="hidden lg:flex gap-8">
-          <button className="text-[#101828] text-sm ">Login</button>
+          <button className="text-[#101828] text-sm "><a href="/auth/login">Login</a></button>
           <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
-            Create an account
+            <a href="/auth/signup">Create an account
+          </a>
           </button>
         </div>
       </nav>
@@ -97,11 +98,12 @@ export default function Home() {
             <a href="" className="hover:text-[#3538CD]">
               Contact Us
             </a>
-            <a href="" className="text-[#101828] text-sm hover:text-[#3538CD]">
+            <a href="/auth/login" className="text-[#101828] text-sm hover:text-[#3538CD]">
               Login
             </a>
             <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
-              Create an account
+            <a href="/auth/signup">Create an account
+            </a>
             </button>
           </div>
         )}
@@ -119,11 +121,11 @@ export default function Home() {
                   payment anytime & anyday.
                 </p>
               </div>
-              <div className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
-                <span className="text-white text-sm font-semibold">
-                  Create an account
-                </span>
-              </div>
+              <a href="/auth/signup" className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
+                <p className="text-white text-sm font-semibold">
+                Create an account
+                </p>
+              </a>
             </div>
             <div className="">
               <Image src={man_image} alt="man_image" />
@@ -192,7 +194,7 @@ export default function Home() {
 
       <section className="w-full text-white bg-[#101828] ">
         <div className="w-full lg:w-[90%] flex flex-col-reverse lg:flex-row lg:justify-center items-center pt-8 lg:gap-[10%]">
-          <div className="w-[90%] flex justify-center items-center xl:w-[512px] xl:w-[50%] ">
+          <div className="w-[90%] flex justify-center items-center xl:w-[512px]">
             <Image src={card_cash} alt="card_cash" />
           </div>
           <div className="w-[90%] lg:w-[60%] xl:w-[445px] md:text-center  gap-2">
@@ -265,8 +267,8 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col bg-white w-full">
-        <div className="flex flex-col items-center lg:gap-12 lg:my-[60px] lg:mx-[100px]">
-          <div className="flex flex-col items-center w-[90%] gap-2 lg:w-[594px]">
+        <div className="flex flex-col items-center lg:gap-12 lg:my-[60px]">
+          <div className="flex flex-col items-center w-[90%] gap-2">
             <h1 className="text-[#3538CD] font-bold text-2xl lg:text-[40px] leading-[33.6px] lg:leading-[56px]">
               Hear from our customers
             </h1>
@@ -275,7 +277,7 @@ export default function Home() {
               eget ipsum, sed praesent.
             </p>
           </div>
-          <div className="flex flex-col w-[90%] items-center lg:flex-row flex-wrap py-6 gap-8">
+          <div className="flex flex-col w-[90%] items-center lg:flex-row flex-wrap lg:justify-center py-6 gap-8">
             <div className="max-w-[343px] flex flex-col gap-6 p-4 lg:py-8 lg:px-6 bg-[#F9FAFB] lg:w-[374px]">
               <p className="font-semibold">Adekola Johnson</p>
               <p className="text-sm lg:self-center text-[#012A4A]">

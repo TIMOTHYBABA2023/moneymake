@@ -31,7 +31,7 @@ const ForgotPassword = () => {
 
 
         <div className="">
-          <a href="" className="text-[#3538CD]">Back to Login</a>
+          <a href="/auth/login" className="text-[#3538CD]">Back to Login</a>
         </div>
       </div>
     </div>

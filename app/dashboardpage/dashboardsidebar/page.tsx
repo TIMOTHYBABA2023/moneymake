@@ -9,7 +9,7 @@ import Payment_icon from "@/public/assets/images/payment icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
 type SidebarProps = {
-  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification";
+  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification" | "notification";
   setActiveSection: (section: SidebarProps["activeSection"]) => void;
 };
 
@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   setActiveSection,
 }) => {
   return (
-    <div className="h-full w-full">
+    <div className="w-full min-h-[1024px]">
       <aside className="sidebar flex flex-col gap-10 ">
         <div className="flex items-center gap-3">
           <div className="h-[30px] w-[30px]">

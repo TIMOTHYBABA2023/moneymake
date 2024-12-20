@@ -7,12 +7,12 @@ export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,tsx}"],
     languageOptions: {
-      parser: "@typescript-eslint/parser", // Set the parser to @typescript-eslint/parser
+      parser: "@typescript-eslint/parser", 
       parserOptions: {
-        ecmaVersion: 2020, // Set ECMAScript version
-        sourceType: "module", // Use module type for imports/exports
+        ecmaVersion: 2020, 
+        sourceType: "module", 
         ecmaFeatures: {
-          jsx: true, // Enable JSX support for TSX
+          jsx: true, 
         },
       },
       globals: globals.browser,

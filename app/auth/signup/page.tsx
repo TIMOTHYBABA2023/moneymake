@@ -109,7 +109,7 @@ const Signup = () => {
           </button>
             <p className="text-[#101828] hidden sm:block text-sm">
               Already have an account?
-              <a href="" className="text-[#3538CD] text-sm font-semibold pl-1">
+              <a href="/auth/login" className="text-[#3538CD] text-sm font-semibold pl-1">
                 Login
               </a>
             </p>

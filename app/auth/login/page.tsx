@@ -7,7 +7,7 @@ import Key_icon from "@/public/assets/images/key-alt.svg";
 
 const Login = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center pb-8">
       <div className="flex items-center gap-4 mt-12">
         <Image src={Logo_icon} alt="Logo_icon" />
         <h1 className="text-[#3538CD] font-semibold sm:font-bold text-[32px] ">MoneyMake</h1>
@@ -39,14 +39,15 @@ const Login = () => {
                 className="w-full outline-none text-[#98A2B3] text-sm "
               />
             </div>
-            <a className="text-[#1570EF] text-sm self-end sm:self-start" href="">Forgot password?</a>
+            <a className="text-[#1570EF] text-sm self-end sm:self-start" href="/auth/forgotpassword">Forgot password?</a>
           </div>
+          <button className="bg-[#3538CD] w-[310px] font-semibold text-white py-3 px-4 rounded-md sm:w-[383px]">Login</button>
+
         </div>
-        <button className="bg-[#3538CD] w-[310px] font-semibold text-white py-3 px-4 rounded-md sm:w-[383px]">Login</button>
 
 
         <div className="">
-          <p className="hidden sm:block text-[#101828]">Don't have a account? <a href="" className="text-[#3538CD]">Create account</a></p>
+          <p className="hidden sm:block text-[#101828]">Don't have a account? <a href="/auth/signup" className="text-[#3538CD]">Create account</a></p>
         </div>
       </div>
       <div className="sm:hidden mt-[52px]">

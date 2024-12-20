@@ -3,7 +3,7 @@ import React from "react";
 
 const Wallet: React.FC = () => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full max-w-[790px] flex flex-col items-center">
        <div className="w-full flex flex-col items-center">
        <h1 className="self-center font-semibold text-[#101828] my-6">Fund Wallet</h1>
 

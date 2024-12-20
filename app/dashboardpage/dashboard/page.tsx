@@ -2,8 +2,6 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import burger_icon from "@/public/assets/images/burger_icon.svg";
-import close_icon from "@/public/assets/images/close_icon.svg";
 import Wallet_plus_icon from "@/public/assets/images/wallet-plus icon.svg";
 import Wallet_clone_icon from "@/public/assets/images/clone icon.svg";
 import Send_icon from "@/public/assets/images/send icon.svg";
@@ -14,18 +12,16 @@ import Firstbank_icon from "@/public/assets/images/firstbank_icon.svg";
 import Fcmbbank_icon from "@/public/assets/images/fcmbbank_icon.svg";
 import arrowup_icon from "@/public/assets/images/arrow-up-right.svg";
 import arrowdown_icon from "@/public/assets/images/arrow-down-left.svg";
-import logo from "@/public/assets/images/Logo.svg";
-import DetailsModal from "@/public/components/Transactiondetailsmodal";
 
 const Dashboard: React.FC = () => {
   const [openNavItems, setOpenNavItems] = useState(false);
 
   return (
     <div className="w-full flex flex-col items-center pb-8">
-      <div className="flex w-[90%] flex-col">
-        <h2 className="text-[#101828] font-bold text-2xl mb-4">Dashboard</h2>
-        <div className="flex flex-wrap gap-6">
-          <div className="w-full max-w-[343px] rounded-3xl bg-[#3538CD] p-4">
+      <div className="w-[90%] max-w-[790px] flex flex-col items-center">
+        <h2 className="text-[#101828] self-start font-bold text-2xl mb-4">Dashboard</h2>
+        <div className="w-full flex flex-col md:flex-row items-center gap-6">
+          <div className="w-full max-w-[343px] rounded-3xl sm:h-[138px] bg-[#3538CD] p-4">
             <div className="flex items-center justify-center gap-8 text-white">
               <Image src={Wallet_plus_icon} alt="Wallet_plus_icon" />
               <div className="flex flex-col gap-2">
@@ -38,13 +34,15 @@ const Dashboard: React.FC = () => {
                   <p className="text-[#FAC515]">Wema Bank</p>
                   <div className="flex gap-4">
                     <p>9389339393</p>
+                    <div>
                     <Image src={Wallet_clone_icon} alt="Wallet_clone_icon" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[343px] rounded-3xl bg-[#FEFDF0] p-4">
+          <div className="w-full max-w-[343px] rounded-3xl sm:h-[138px] bg-[#FEFDF0] p-4">
             <div className="w-[80%] flex items-center justify-center gap-8 text-black">
               <Image src={Send_icon} alt="send_icon" />
               <div className="flex flex-col gap-2">
@@ -66,10 +64,10 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-[90%] my-10">
+      <div className="w-[90%] max-w-[790px] my-10">
         <Image src={Chart_icon} alt="Chart_icon" />
       </div>
-      <div className="w-[90%] flex flex-col">
+      <div className="w-[90%] max-w-[790px] flex flex-col">
         <div className="w-[100%] bg-white flex flex-col items-center gap-8 pl-4 py-4">
           <div className="w-[90%] flex justify-between">
             <p className="font-semibold text-sm text-[#012A4A]">
@@ -154,7 +152,6 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <DetailsModal /> */}
     </div>
     
   );

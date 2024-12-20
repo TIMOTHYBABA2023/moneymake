@@ -17,12 +17,12 @@ import Shield_exclamation from "@/public/assets/images/shield-exclamation.svg";
 import Contact_account_icon from "@/public/assets/images/contact_account icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
-export type NavbarProps = {
-  activeSection: "dashboard" | "airtime" | "transfer" | "wallet" | "payment" | "notification";
-  setActiveSection: (section: NavbarProps["activeSection"]) => void;
+type SidebarProps = {
+  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification" | "notification";
+  setActiveSection: (section: SidebarProps["activeSection"]) => void;
 };
 
-const Navbar: React.FC<NavbarProps> = ({
+const Navbar: React.FC<SidebarProps> = ({
   activeSection,
   setActiveSection,
 }) => {
@@ -34,13 +34,13 @@ const Navbar: React.FC<NavbarProps> = ({
       <nav className="lg:flex items-center w-full justify-between">
         <div className="w-full py-4 px-8">
           <div className="w-full flex justify-between items-center">
-            <div className="md:hidden flex flex-wrap justify-around items-center gap-2">
-              <Image src={logo} alt="logo" className="h-[40px] w-[40px]" />
+            <div className="lg:hidden flex flex-wrap justify-around items-center gap-2">
+              <Image src={logo} alt="logo" className="h-[auto] w-[40px]" />
               <h1 className="font-bold text-[16px] text-[#3538CD] ">
                 MoneyMake
               </h1>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <div className="">
                 {!openNavItems && (
                   <Image
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </div>
             </div>
           </div>
-          <div className="hidden md:flex px-8 place-self-end gap-8">
+          <div className="hidden lg:flex px-8 place-self-end gap-8">
             <div className="flex">
               <Image src={Navbar_bell_icon} alt="Navbar_bell_icon" />
             </div>
@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
       </nav>
-      <nav className="flex md:hidden flex-col bg-white items-center w-full justify-around py-2">
+      <nav className="flex lg:hidden flex-col bg-white items-center w-full justify-around py-2">
         {openNavItems && (
           <div className="flex flex-col w-[80%] text-[#101828] p-8 gap-8 text-sm">
             <nav className="flex flex-col gap-8">
@@ -192,7 +192,7 @@ const Navbar: React.FC<NavbarProps> = ({
       </nav>
 
       {hideProfileModal && (
-        <div className="hidden md:flex absolute top-16 right-8 bg-white shadow-lg rounded-md p-4 w-30 z-50">
+        <div className="hidden lg:flex absolute top-16 right-8 bg-white shadow-lg rounded-md p-4 w-30 z-50">
           <div className="w-full flex flex-col items-center gap-2">
             <div className="flex items-center gap-2">
               <Image src={Navbar_image_icon} alt="Navbar_image_icon" />

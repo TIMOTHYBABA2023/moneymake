@@ -2,6 +2,7 @@
 import React from 'react'
 import { useState } from "react"
 import { ChangeEvent } from 'react';
+import SpendingChart from '@/public/components/SpendingChart';
 
 
 const TestController = () => {
@@ -31,7 +32,9 @@ const TestController = () => {
             onChange={handleImageUpload}
           />
           <span>📷</span>
-        </label>
+        </label><div>
+          {/* <SpendingChart /> */}
+        </div>
     </div>
   )
 }

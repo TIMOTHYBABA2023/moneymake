@@ -12,13 +12,18 @@ const Transfer: React.FC = () => {
     setSelectedBank(bank);
   };
 
-  const handleTransferChange = (type: "local" | "other") => {
+  const handleTransferChange = (type: "local" | "other" | "beneficiary") => {
     setSelectedTransfer(type);
   };
  
   return (
-    <div>
-    <div className="w-full bg-white max-w-lg mx-auto p-4">
+    <div className="w-full flex max-w-[900px] flex-col items-center">
+      <div className="font-bold text-2xl text-[#101828] my-6">
+      {selectedTransfer === "local" && (<h1>Transfer</h1>)}
+      {selectedTransfer === "other" && (<h1>Other Banks</h1>)}
+      {selectedTransfer === "beneficiary" && (<h1>Beneficiary</h1>)}
+      </div>
+    <div className="w-[90%] bg-white p-4">
       {/* Transfer Type Buttons */}
       <div className="flex justify-between mb-6">
         <div
@@ -41,11 +46,21 @@ const Transfer: React.FC = () => {
         >
           Other Bank Transfer
         </div>
+        <div
+          onClick={() => handleTransferChange("beneficiary")}
+          className={`hidden sm:block cursor-pointer text-center py-2 flex-1 ${
+            selectedTransfer === "beneficiary"
+              ? "text-blue-600 border-b-4 border-blue-600"
+              : "text-gray-600"
+          }`}
+        >
+          Beneficiary
+        </div>
       </div>
 
       {/* Local Transfer Form */}
       {selectedTransfer === "local" && (
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-lg">
           <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-[#012A4A]">Account Number</label>
@@ -92,7 +107,7 @@ const Transfer: React.FC = () => {
 
       {/* Other Bank Transfer Form */}
       {selectedTransfer === "other" && (
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-lg">
           <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-[#012A4A]">Amount</label>
@@ -186,6 +201,43 @@ const Transfer: React.FC = () => {
               Continue
             </button>
           </form>
+        </div>
+      )}
+
+
+      {/* Other Bank Transfer Form */}
+      {selectedTransfer === "beneficiary" && (
+        <div className="bg-white text-[#000000] text-sm p-6 flex flex-col items-center">
+          <div className="w-[90%] flex flex-col gap-4">
+<div className="flex justify-between items-center">
+  <div>
+    <p>Abdullahi Steven</p>
+    <p>0023456723</p>
+    </div>
+  <div>Other Bank</div>
+</div>
+<div className="flex justify-between">
+  <div>
+    <p>Mary Johnson</p>
+    <p>0023456723</p>
+    </div>
+  <div>Local transfer</div>
+</div>
+<div className="flex justify-between">
+  <div>
+    <p>Gaius Udeme</p>
+    <p>0023456723</p>
+    </div>
+  <div>Other Bank</div>
+</div>
+<div className="flex justify-between">
+  <div>
+    <p>John Olawale</p>
+    <p>0023456723</p>
+    </div>
+  <div>Local transfer</div>
+</div>
+          </div>
         </div>
       )}
     </div>

@@ -22,7 +22,7 @@ const BasePage: React.FC = () => {
   return (
     <div className="base-container w-full text-black flex">
       <div className="w-full flex">
-        <div className="md:w-[30%] bg-white hidden md:block md:p-4">        
+        <div className="md:w-[30%] bg-white hidden lg:block md:p-4">        
           <Sidebar activeSection={activeSection} setActiveSection={setActiveSection}/>
         </div>
        
@@ -30,8 +30,8 @@ const BasePage: React.FC = () => {
         <div>
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
         </div>
-            <main className="content w-full flex flex-col items-center mt-8">
-              <div className="w-full flex flex-col">
+            <main className="w-full flex flex-col items-center mt-8">
+              <div className="w-full flex flex-col items-center">
                   {activeSection === "dashboard" && <Dashboard />}
                   {activeSection === "transfer" && <Transfer />}
                   {activeSection === "wallet" && <Wallet/>}
