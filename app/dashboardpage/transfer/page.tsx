@@ -17,7 +17,7 @@ const Transfer: React.FC = () => {
   };
  
   return (
-    <div className="w-full flex max-w-[900px] flex-col items-center">
+    <div className="w-full flex max-w-[900px]  flex-col items-center">
       <div className="font-bold text-2xl text-[#101828] my-6">
       {selectedTransfer === "local" && (<h1>Transfer</h1>)}
       {selectedTransfer === "other" && (<h1>Other Banks</h1>)}
@@ -25,7 +25,7 @@ const Transfer: React.FC = () => {
       </div>
     <div className="w-[90%] bg-white p-4">
       {/* Transfer Type Buttons */}
-      <div className="flex justify-between mb-6">
+      <div className="flex justify-between border-b-2 text-gray-600 mb-6">
         <div
           onClick={() => handleTransferChange("local")}
           className={`cursor-pointer text-center py-2 flex-1 ${

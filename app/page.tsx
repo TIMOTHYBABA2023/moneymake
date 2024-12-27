@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from 'next/link';
 import Image from "next/image";
 import logo from "@/public/assets/images/Logo.svg";
 import logo_40 from "@/public/assets/images/logo 40.svg";
@@ -34,24 +35,24 @@ export default function Home() {
         <div className="flex gap-8"></div>
 
         <div className="hidden lg:flex justify-between text-[#101828] gap-8 text-sm">
-          <a href="/" className="hover:text-[#3538CD]">
+          <Link href="/" className="hover:text-[#3538CD]">
             Home
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
+          </Link>
+          <Link href="" className="hover:text-[#3538CD]">
             Features
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
+          </Link>
+          <Link href="" className="hover:text-[#3538CD]">
             About
-          </a>
-          <a href="" className="hover:text-[#3538CD]">
+          </Link>
+          <Link href="" className="hover:text-[#3538CD]">
             Contact Us
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:flex gap-8">
-          <button className="text-[#101828] text-sm "><a href="/auth/login">Login</a></button>
+          <button className="text-[#101828] text-sm "><Link href="/login">Login</Link></button>
           <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
-            <a href="/auth/signup">Create an account
-          </a>
+            <Link href="/signup">Create an account
+          </Link>
           </button>
         </div>
       </nav>
@@ -86,24 +87,24 @@ export default function Home() {
 
         {openNavItems && (
           <div className="flex flex-col w-full text-[#101828] mx-4 my-[24px] p-8 bg-white gap-8 text-sm">
-            <a href="" className="hover:text-[#3538CD]">
+            <Link href="" className="hover:text-[#3538CD]">
               Home
-            </a>
-            <a href="" className="hover:text-[#3538CD]">
+            </Link>
+            <Link href="" className="hover:text-[#3538CD]">
               Features
-            </a>
-            <a href="" className="hover:text-[#3538CD]">
+            </Link>
+            <Link href="" className="hover:text-[#3538CD]">
               About
-            </a>
-            <a href="" className="hover:text-[#3538CD]">
+            </Link>
+            <Link href="" className="hover:text-[#3538CD]">
               Contact Us
-            </a>
-            <a href="/auth/login" className="text-[#101828] text-sm hover:text-[#3538CD]">
+            </Link>
+            <Link href="/login" className="text-[#101828] text-sm hover:text-[#3538CD]">
               Login
-            </a>
+            </Link>
             <button className="bg-[#3538CD] text-white rounded-md py-3 px-4">
-            <a href="/auth/signup">Create an account
-            </a>
+            <Link href="/signup">Create an account
+            </Link>
             </button>
           </div>
         )}

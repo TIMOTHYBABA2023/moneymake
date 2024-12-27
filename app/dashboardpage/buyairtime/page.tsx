@@ -9,7 +9,7 @@ import Airtel_icon from "@/public/assets/images/Airtel.svg";
 import Glo_icon from "@/public/assets/images/Glo icon.svg";
 import Etisalat_icon from "@/public/assets/images/9Mobile icon.svg";
 
-const BuyAirtime = () => {
+const BuyAirtime: React.FC = () => {
   //   const [selectedNetwork, setSelectedNetwork] = useState("MTN");
   const [openSelectionOption, setOpenSelectionOption] = useState(false);
 

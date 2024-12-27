@@ -35,7 +35,7 @@ const Login = () => {
               <Image src={Key_icon} alt="Key_icon" />
               <input
                 type="text"
-                placeholder="Enter your email"
+                placeholder="Enter your password"
                 className="w-full outline-none text-[#98A2B3] text-sm "
               />
             </div>
@@ -44,7 +44,6 @@ const Login = () => {
           <button className="bg-[#3538CD] w-[310px] font-semibold text-white py-3 px-4 rounded-md sm:w-[383px]">Login</button>
 
         </div>
-
 
         <div className="">
           <p className="hidden sm:block text-[#101828]">Don't have a account? <a href="/auth/signup" className="text-[#3538CD]">Create account</a></p>

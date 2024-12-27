@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Dashboard_icon from "@/public/assets/images/dashboard icon.svg";
 import Airtime_icon from "@/public/assets/images/buy airtime icon.svg";
@@ -17,18 +17,19 @@ import Shield_exclamation from "@/public/assets/images/shield-exclamation.svg";
 import Contact_account_icon from "@/public/assets/images/contact_account icon.svg";
 import Logout_icon from "@/public/assets/images/logout icon.svg";
 
+type Section =
+  | "dashboard"
+  | "airtime"
+  | "transfer"
+  | "wallet"
+  | "payment"
+  | "notification";
 
-type SidebarProps = {
-  activeSection: "dashboard" | "transfer" | "wallet" | "payment" | "airtime" | "notification";
-  setActiveSection: (section: SidebarProps["activeSection"]) => void;
-};
-
-const Navbar: React.FC<SidebarProps> = ({
-  activeSection,
-  setActiveSection,
-}) => {
+const Navbar: React.FC = () => {
   const [openNavItems, setOpenNavItems] = useState(false);
   const [hideProfileModal, setHideProfileModal] = useState(false);
+    const [activeSection, setActiveSection] = useState<Section>("dashboard");
+  
 
   return (
     <div className="w-full bg-white">
@@ -45,8 +46,7 @@ const Navbar: React.FC<SidebarProps> = ({
               <div className="">
                 {!openNavItems && (
                   <Image
-                    src={burger_icon}
-                    alt="burger_icon"
+                    src={burger_icon} alt="burger_icon"
                     onClick={() => setOpenNavItems(!openNavItems)}
                   />
                 )}
@@ -78,85 +78,105 @@ const Navbar: React.FC<SidebarProps> = ({
       </nav>
       <nav className="flex lg:hidden flex-col bg-white items-center w-full justify-around py-2">
         {openNavItems && (
-          <div className="flex flex-col w-[80%] text-[#101828] p-8 gap-8 text-sm">
+          <div className="flex flex-col w-[80%] text-[#101828] py-8 gap-8 text-sm">
             <nav className="flex flex-col gap-8">
               <ul className="flex flex-col gap-4">
-                <li
-                  onClick={() => {setActiveSection("dashboard")
-                    setOpenNavItems(!openNavItems)}
-                  }
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "dashboard"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Dashboard_icon} alt="Dashboard Icon" />
-                  <p>Dashboard</p>
-                </li>
-                <li
-                  onClick={() => setActiveSection("airtime")}
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "airtime"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Airtime_icon} alt="Dashboard Icon" />
-                  <p>Buy Airtime</p>
-                </li>
-                <li
-                  onClick={() => {setActiveSection("payment")
-                    setOpenNavItems(!openNavItems)}
-                  }
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "payment"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Payment_icon} alt="Payment Icon" />
-                  <p>Pay Bill</p>
-                </li>
-                <li
-                  onClick={() => {setActiveSection("transfer")
-                    setOpenNavItems(!openNavItems)
-                  }}
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "transfer"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Tranfer_icon} alt="Transfer Icon" />
-                  <p>Transfer</p>
-                </li>
-                <li
-                  onClick={() => {setActiveSection("wallet")
-                    setOpenNavItems(!openNavItems)
-                  }}
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "wallet"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Wallet_icon} alt="Wallet Icon" />
-                  <p>Fund Wallet</p>
-                </li>
-                <li
-                  onClick={() => {setActiveSection("notification")
-                    setOpenNavItems(!openNavItems)
-                  }}
-                  className={`w-[80%] flex items-center gap-2 p-2 rounded-md cursor-pointer ${
-                    activeSection === "notification"
-                      ? "bg-blue-500 text-white"
-                      : "hover:bg-blue-200"
-                  }`}
-                >
-                  <Image src={Notification_icon} alt="Notification_icon" />
-                  <p>Notification</p>
-                </li>
+              <Link
+              href="/dashboardpage"
+              onClick={() => {setActiveSection("dashboard")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "dashboard"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Dashboard_icon} alt="Dashboard Icon" />
+                <p>Dashboard</p>
+              </li>
+            </Link>
+              <Link
+              href="/dashboardpage/buyairtime"
+              onClick={() => {setActiveSection("airtime")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "airtime"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Airtime_icon} alt="Airtime_icon" />
+                <p>Buy Airtime</p>
+              </li>
+            </Link>
+              <Link
+              href="/dashboardpage/payment"
+              onClick={() => {setActiveSection("payment")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "payment"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Payment_icon} alt="Payment_icon" />
+                <p>Pay Bill</p>
+              </li>
+            </Link>
+              <Link
+              href="/dashboardpage/transfer"
+              onClick={() => {setActiveSection("transfer")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "transfer"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Tranfer_icon} alt="Tranfer_icon" />
+                <p>Transfer</p>
+              </li>
+            </Link>
+              <Link
+              href="/dashboardpage/wallet"
+              onClick={() => {setActiveSection("wallet")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "wallet"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Wallet_icon} alt="Wallet_icon" />
+                <p>Fund Wallet</p>
+              </li>
+            </Link>
+              <Link
+              href="/dashboardpage/notification"
+              onClick={() => {setActiveSection("notification")
+                setOpenNavItems(!openNavItems)}
+              }
+              className={`flex items-center gap-2 py-2 px-8 rounded-md cursor-pointer ${
+                activeSection === "notification"
+                  ? "bg-blue-500 text-white"
+                  : "hover:bg-blue-200"
+              }`}
+            >
+              <li className="flex items-center gap-2 p-2">
+                <Image src={Notification_icon} alt="Notification_icon" />
+                <p>Notification</p>
+              </li>
+            </Link>
               </ul>
               <div className="flex flex-col p-2 gap-4">
                 <p className="text-[#98A2B3]">OTHERS</p>
@@ -230,5 +250,4 @@ const Navbar: React.FC<SidebarProps> = ({
     </div>
   );
 };
-
 export default Navbar;
