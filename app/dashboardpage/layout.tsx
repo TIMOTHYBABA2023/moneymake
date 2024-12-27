@@ -1,18 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "@/app/dashboardpage/dashboardsidebar/page";
 import Navbar from "@/app/dashboardpage/dashboardnavbar/page";
 
-type Section = 
-  | "dashboard"
-  | "airtime"
-  | "transfer"
-  | "wallet"
-  | "payment"
-  | "notification";
 
-const Layout = ({children}: {children: React.ReactNode}) => {
-  const [activeSection, setActiveSection] = useState<Section>("dashboard");
+const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="base-container w-full text-black flex flex-col">
