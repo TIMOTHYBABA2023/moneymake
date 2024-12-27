@@ -1,15 +1,15 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import * as tseslint from "@typescript-eslint/eslint-plugin";
-import { ESLint } from "eslint";
+import parser from "@typescript-eslint/parser";
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,tsx}"],
     ignores: ["node_modules/**", "dist/**", ".next/**"],
     languageOptions: {
-      parser: "@typescript-eslint/parser",
+      parser: parser,
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
