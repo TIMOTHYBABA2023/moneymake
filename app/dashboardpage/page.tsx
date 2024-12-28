@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useState } from "react";
 import Image from "next/image";
 import Wallet_plus_icon from "@/public/assets/images/wallet-plus icon.svg";
 import Wallet_clone_icon from "@/public/assets/images/clone icon.svg";
@@ -13,8 +12,8 @@ import Fcmbbank_icon from "@/public/assets/images/fcmbbank_icon.svg";
 import arrowup_icon from "@/public/assets/images/arrow-up-right.svg";
 import arrowdown_icon from "@/public/assets/images/arrow-down-left.svg";
 
+
 const Dashboard: React.FC = () => {
-  const [openNavItems, setOpenNavItems] = useState(false);
 
   return (
     <div className="w-full flex flex-col items-center pb-8">
