@@ -122,11 +122,11 @@ export default function Home() {
                   payment anytime & anyday.
                 </p>
               </div>
-              <a href="/auth/signup" className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
+              <Link href="/signup" className="bg-[#3538CD] sm:w-[50%] md:w-[70%] xl:w-[25%] rounded-md py-3 mb-4 flex justify-center gap-4">
                 <p className="text-white text-sm font-semibold">
                 Create an account
                 </p>
-              </a>
+              </Link>
             </div>
             <div className="">
               <Image src={man_image} alt="man_image" />

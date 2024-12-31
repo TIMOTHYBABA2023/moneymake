@@ -35,11 +35,11 @@ const Transactiondetailsmodal = () => {
           </div>
         </div>
         <div className="flex gap-1">
-            <div className="flex gap-1 py-2 px-4 rounded-md justify-center border">
+            <div className="flex gap-1 py-2 px-4 rounded-md justify-center items-center text-[#34A853] border border-[#34A853]">
                 <p className="text-sm">Share Receipt</p>
-                <div className="w-8 h-8"><Image src={Share_icon} alt="Share_icon"/></div>
+               <Image src={Share_icon} alt="Share_icon"/>
             </div>
-            <div className="flex gap-1 py-2 px-4 rounded-md justify-center border">
+            <div className="flex gap-1 py-2 px-4 rounded-md justify-center items-center border border-[#D0D5DD] text-[#667085]">
                 <p className="text-sm">Download image</p>
                 <Image src={Download_icon} alt="Download_icon"/>
             </div>

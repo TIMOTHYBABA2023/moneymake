@@ -1,12 +1,22 @@
 'use client'
 import React from "react";
 import { useState } from "react";
+import Image from "next/image";
 import { banks as BankDetails } from "@/public/bankDetails"
+import Selectnetwork from "@/public/assets/images/selection_arrowdown.svg";
+import Search_icon from "@/public/assets/images/search_icon.svg";
+import Firstbank_icon from "@/public/assets/images/firstbank_icon.svg";
+import GtBank_icon from "@/public/assets/images/gtbank_icon.svg";
+import FCMB_icon from "@/public/assets/images/fcmbbank_icon.svg";
+import Polaris_icon from "@/public/assets/images/polaris_bank.svg";
+import Link from "next/link";
 
 
 const Transfer: React.FC = () => {
   const [selectedTransfer, setSelectedTransfer] = useState("local");
   const [selectedBank, setSelectedBank] = useState<typeof BankDetails[0] | null>(null);
+  const [openSelectionOption, setOpenSelectionOption] = useState(false);
+  
 
   const handleBankSelect = (bank: typeof BankDetails[0]) => {
     setSelectedBank(bank);
@@ -95,12 +105,11 @@ const Transfer: React.FC = () => {
               ></textarea>
             </div>
            
-            <button
-              type="submit"
-              className="w-full py-3 px-4 bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
+            <Link href="/dashboardpage/confirmtransaction"
+              className="w-full py-3 px-4 text-center bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
             >
               Continue
-            </button>
+            </Link>
           </form>
         </div>
       )}
@@ -119,55 +128,63 @@ const Transfer: React.FC = () => {
             </div>
             <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold text-[#012A4A]">Bank</label>
-      <div className="relative">
-        <button
-          className="w-full flex items-center justify-between px-4 py-3 border border-[#98A2B3] rounded-md focus:outline-none"
-        >
-          {selectedBank ? (
-            <div className="flex items-center gap-2">
-              {/* <img
-                src={selectedBank.image}
-                alt={selectedBank.name}
-                className="w-6 h-6"
-              /> */}
-            </div>
-          ) : (
-            <span>Select a bank</span>
-          )}
-          <svg
-            className="w-4 h-4 text-gray-500"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
-        <ul className="absolute mt-1 w-full bg-white border border-[#98A2B3] rounded-md shadow-lg z-10">
-          {BankDetails.map((bank) => (
-            <li
-              key={bank.id}
-              className="flex items-center gap-2 px-4 py-2 hover:bg-blue-50 cursor-pointer"
-              onClick={() => handleBankSelect(bank)}
-            >
-              {/* <img src={bank.image} alt={bank.name} className="w-6 h-6" /> */}
-              <span>{bank.name}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-              {/* <label className="text-sm font-semibold text-[#012A4A]">Bank</label>
+            <div className="flex flex-col gap-2">
+            <div className="relative flex">
               <input
                 type="text"
                 className="w-full px-4 py-3 border border-[#98A2B3] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                 placeholder="Select"
-              /> */}
+              />
+              <span
+                className="absolute right-5 top-3"
+                onClick={() => setOpenSelectionOption(!openSelectionOption)}
+              >
+                <Image src={Selectnetwork} alt="Selectnetwork" />{" "}
+              </span>
+            </div>
+            {openSelectionOption && (
+              <div>
+                <div className="w-full flex gap-4 items-center px-4 py-3 border border-[#98A2B3] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                >
+                  <Image src={Search_icon} alt="Search_icon" />
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="w-full focus:outline-none"
+                  />
+                </div>
+                <ul className="flex flex-col gap-8 py-4 text-[#101828] text-sm">
+                  <li
+                    className="flex gap-6 items-center"
+                    onClick={() => setOpenSelectionOption(!openSelectionOption)}
+                  >
+                    <Image src={Firstbank_icon} alt="Firstbank_icon" /> First Bank
+                  </li>
+                  <li
+                    className="flex gap-6 items-center"
+                    onClick={() => setOpenSelectionOption(!openSelectionOption)}
+                  >
+                    <Image src={GtBank_icon} alt="GtBank_icon" />
+                    Guaranty Trust Bank
+                  </li>
+                  <li
+                    className="flex gap-6 items-center"
+                    onClick={() => setOpenSelectionOption(!openSelectionOption)}
+                  >
+                    <Image src={Polaris_icon} alt="Polaris_icon" />
+                    Polaris Bank
+                  </li>
+                  <li
+                    className="flex gap-6 items-center"
+                    onClick={() => setOpenSelectionOption(!openSelectionOption)}
+                  >
+                    <Image src={FCMB_icon} alt="FCMB_icon" />
+                    First City Monument Bank
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-[#012A4A]">Account Number</label>
@@ -194,12 +211,12 @@ const Transfer: React.FC = () => {
               ></textarea>
             </div>
            
-            <button
+            <Link href="/dashboardpage/confirmtransaction"
               type="submit"
-              className="w-full py-3 px-4 bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
+              className="w-full py-3 px-4 text-center bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
             >
               Continue
-            </button>
+            </Link>
           </form>
         </div>
       )}

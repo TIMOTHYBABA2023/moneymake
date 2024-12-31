@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Default_background_icon from "@/public/assets/images/default background_icon.svg";
-import Upload_image_icon from "@/public/assets/images/image upload icon.svg";
+import Profile_frame from "@/public/assets/images/profile frame.svg";
 
 const Profile = () => {
   return (
@@ -12,12 +11,13 @@ const Profile = () => {
         </h1>
 
         <div className="w-[90%] bg-white p-4 rounded-lg">
-          <form className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <div className="relative flex flex-col items-center mb-10">
-                <Image src={Default_background_icon} alt="Default_background_icon" />
-                <Image src={Upload_image_icon} alt="Upload_image_icon" className="absolute top-11" />
+          <form className="w-full flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-2">
+             <div className="w-full">
+             <div className="w-full flex flex-col items-center mb-5">
+                <Image src={Profile_frame} alt="Profile_frame" className="" />
               </div>
+             </div>
               
             </div>
             <div className="flex flex-col gap-2">

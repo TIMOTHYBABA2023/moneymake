@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import ChartComponent from "@/public/components/ChartComponent"
 import Wallet_plus_icon from "@/public/assets/images/wallet-plus icon.svg";
 import Wallet_clone_icon from "@/public/assets/images/clone icon.svg";
 import Send_icon from "@/public/assets/images/send icon.svg";
-import Chart_icon from "@/public/assets/images/Chart.svg";
 import Filter_icon from "@/public/assets/images/filter_icon.svg";
 import Gtbank_icon from "@/public/assets/images/gtbank_icon.svg";
 import Firstbank_icon from "@/public/assets/images/firstbank_icon.svg";
@@ -20,7 +21,7 @@ const Dashboard: React.FC = () => {
       <div className="w-[90%] max-w-[790px] flex flex-col items-center">
         <h2 className="text-[#101828] self-start font-bold text-2xl mb-4">Dashboard</h2>
         <div className="w-full flex flex-col md:flex-row items-center gap-6">
-          <div className="w-full max-w-[343px] rounded-3xl sm:h-[138px] bg-[#3538CD] p-4">
+          <div className="w-full max-w-[343px] rounded-[8px] sm:h-[138px] bg-[#3538CD] p-4">
             <div className="flex items-center justify-center gap-8 text-white">
               <Image src={Wallet_plus_icon} alt="Wallet_plus_icon" />
               <div className="flex flex-col gap-2">
@@ -41,7 +42,7 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[343px] rounded-3xl sm:h-[138px] bg-[#FEFDF0] p-4">
+          <div className="w-full max-w-[343px] rounded-[8px] sm:h-[138px] bg-[#FEFDF0] p-4">
             <div className="w-[80%] flex items-center justify-center gap-8 text-black">
               <Image src={Send_icon} alt="send_icon" />
               <div className="flex flex-col gap-2">
@@ -64,7 +65,8 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       <div className="w-[90%] max-w-[790px] my-10">
-        <Image src={Chart_icon} alt="Chart_icon" />
+        {/* <Image src={Chart_icon} alt="Chart_icon" /> */}
+        <ChartComponent />
       </div>
       <div className="w-[90%] max-w-[790px] flex flex-col">
         <div className="w-[100%] bg-white flex flex-col items-center gap-8 pl-4 py-4">
@@ -78,8 +80,8 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-6">
-            <div className="w-full flex justify-between ">
-              <div className="flex gap-2 items-center">
+            <Link href="/dashboardpage/transactiondetail" className="w-full flex justify-between ">
+              <div  className="flex gap-2 items-center">
               <div className="w-[32px] h-[32px]">
                   <Image
                     src={Gtbank_icon}
@@ -103,7 +105,7 @@ const Dashboard: React.FC = () => {
                   <Image src={arrowdown_icon} alt="arrowdown_icon" />
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="w-full flex justify-between ">
               <div className="flex gap-2 items-center">
                 <div>

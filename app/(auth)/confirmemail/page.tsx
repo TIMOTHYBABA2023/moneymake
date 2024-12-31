@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 const ConfirmEmail = () => {
   return (
@@ -10,7 +11,7 @@ const ConfirmEmail = () => {
         <div className="flex flex-col items-center gap-8 w-[310px] sm:w-[383px]">
         <p className="w-[272px] sm:w-[345px] text-center text-sm">We sent a password reset link to your email. Please click the link to reset your password.</p>
         <p className="text-[#101828]">Don’t received an email? <span className="text-[#3538CD] font-semibold">Click to Resend</span></p>
-        <button className="bg-[#3538CD] font-semibold text-white py-3 px-4 rounded-md w-[310px] sm:w-[383px]">Back to Login</button>
+        <button className="bg-[#3538CD] font-semibold text-white py-3 px-4 rounded-md w-[310px] sm:w-[383px]"><Link href="/login">Back to Login</Link></button>
         </div>
            
       </div>

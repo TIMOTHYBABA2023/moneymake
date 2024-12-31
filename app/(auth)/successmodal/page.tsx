@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import success_icon from "@/public/assets/images/Success.svg";
+import Link from "next/link";
 
 const SuccessModal = () => {
   return (
@@ -12,7 +13,7 @@ const SuccessModal = () => {
         <div className="flex flex-col items-center gap-6 w-[288px] sm:w-[383px]">
         <h2 className="text-[#012A4A] text-2xl font-bold">Successful</h2>
         <p className="w-[345px] text-center text-sm text-[#101828]">Your password has been changed <br className="sm:hidden" /> successfully. <br className="hidden sm:block"/> Login to access your account</p>
-        <button className="bg-[#3538CD] font-semibold text-white py-3 px-4 rounded-md w-[242px] sm:w-[383px]">Continue to Login</button>
+        <button className="bg-[#3538CD] font-semibold text-white py-3 px-4 rounded-md w-[242px] sm:w-[383px]"><Link href="/login">Continue to Login</Link></button>
         </div>
            
       </div>

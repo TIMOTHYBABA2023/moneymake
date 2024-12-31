@@ -226,23 +226,23 @@ const Navbar: React.FC = () => {
             </div>
             <hr className="w-full" />
             <div className="w-[98%] flex flex-col gap-8 my-4">
-              <p className="flex gap-4">
+              <Link href="/dashboardpage/profile" onClick={() => setHideProfileModal(!hideProfileModal)} className="flex gap-4">
                 {" "}
                 <Image
                   src={Contact_account_icon}
                   alt="Contact_account_icon"
                 />{" "}
                 Account
-              </p>
-              <p className="flex gap-4">
+              </Link>
+              <Link href="/dashboardpage/securitysettings" onClick={() => setHideProfileModal(!hideProfileModal)}  className="flex gap-4">
                 {" "}
                 <Image src={Shield_exclamation} alt="Shield_exclamation" />{" "}
                 Security
-              </p>
-              <p className="flex gap-4">
+              </Link>
+              <Link href="/dashboardpage/logout" onClick={() => setHideProfileModal(!hideProfileModal)} className="flex gap-4">
                 {" "}
                 <Image src={Logout_icon} alt="Logout_icon" /> Logout
-              </p>
+              </Link>
             </div>
           </div>
         </div>

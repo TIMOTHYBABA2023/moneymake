@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Logo_icon from "@/public/assets/images/Logo.svg";
 import Email_icon from "@/public/assets/images/mail-alt-1.svg";
+import Link from "next/link";
 
 const ForgotPassword = () => {
   return (
@@ -31,7 +32,7 @@ const ForgotPassword = () => {
 
 
         <div className="">
-          <a href="/auth/login" className="text-[#3538CD]">Back to Login</a>
+          <Link href="/login" className="text-[#3538CD]">Back to Login</Link>
         </div>
       </div>
     </div>

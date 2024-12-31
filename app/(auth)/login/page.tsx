@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo_icon from "@/public/assets/images/Logo.svg";
 import Email_icon from "@/public/assets/images/mail-alt-1.svg";
 import Key_icon from "@/public/assets/images/key-alt.svg";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -39,18 +40,18 @@ const Login = () => {
                 className="w-full outline-none text-[#98A2B3] text-sm "
               />
             </div>
-            <a className="text-[#1570EF] text-sm self-end sm:self-start" href="/auth/forgotpassword">Forgot password?</a>
+            <Link className="text-[#1570EF] text-sm self-end sm:self-start" href="/forgotpassword">Forgot password?</Link>
           </div>
-          <button className="bg-[#3538CD] w-[310px] font-semibold text-white py-3 px-4 rounded-md sm:w-[383px]">Login</button>
+          <Link href="/dashboardpage" className="bg-[#3538CD] w-[310px] text-center font-semibold text-white py-3 px-4 rounded-md sm:w-[383px]">Login</Link>
 
         </div>
 
         <div className="">
-          <p className="hidden sm:block text-[#101828]">Don't have a account? <a href="/auth/signup" className="text-[#3538CD]">Create account</a></p>
+          <p className="hidden sm:block text-[#101828]">Don't have a account? <Link href="/signup" className="text-[#3538CD]">Create account</Link></p>
         </div>
       </div>
       <div className="sm:hidden mt-[52px]">
-          <p className="text-[#101828] text-sm">Don't have a account? <a href="" className="text-[#3538CD] font-semibold text-sm">Create account</a></p>
+          <p className="text-[#101828] text-sm">Don't have a account? <Link href="/signup" className="text-[#3538CD] font-semibold text-sm">Create account</Link></p>
         </div>
     </div>
   );

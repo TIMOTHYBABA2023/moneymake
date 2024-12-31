@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Confirmation_icon from "@/public/assets/images/confirmation_icon.svg"
+import Link from "next/link";
 
 const Confirmtransaction = () => {
   return (
@@ -34,7 +35,7 @@ const Confirmtransaction = () => {
             </div> 
            
         </div>
-        <div className="flex items-center justify-center bg-[#3538CD] text-white py-3 rounded-md w-[90%] mt-[100px] mb-4"><button>Send Money</button></div>
+        <Link href="/dashboardpage/successfultransaction" className="flex items-center justify-center bg-[#3538CD] text-white py-3 rounded-md w-[90%] mt-[100px] mb-4"><button>Send Money</button></Link>
       </div>
     </div>
   );

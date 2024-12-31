@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 import React from "react";
 
 const Wallet: React.FC = () => {
@@ -8,7 +9,7 @@ const Wallet: React.FC = () => {
        <h1 className="self-center font-semibold text-[#101828] my-6">Fund Wallet</h1>
 
               <div className="w-[90%] bg-white p-4 rounded-lg">
-                <form className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-[#012A4A]">Amount</label>
                     <input
@@ -42,13 +43,11 @@ const Wallet: React.FC = () => {
                     ></textarea>
                   </div>
                  
-                  <button
-                    type="submit"
-                    className="w-full py-3 px-4 bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
+                  <button className="w-full py-3 px-4 bg-[#3538CD] text-white rounded-md hover:bg-blue-700 focus:outline-none"
                   >
-                    Continue
+                    <Link href="/dashboardpage/confirmfundwallet">Continue</Link>
                   </button>
-                </form>
+                </div>
               </div>
           </div>
     </div>

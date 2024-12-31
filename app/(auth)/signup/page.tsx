@@ -7,6 +7,7 @@ import contact_icon from "@/public/assets/images/contact_icon.svg";
 import phone_icon from "@/public/assets/images/phone_icon.svg";
 import password_icon from "@/public/assets/images/lock_icon.svg";
 import key_icon from "@/public/assets/images/key-alt.svg";
+import Link from "next/link";
 
 const Signup = () => {
   return (
@@ -109,7 +110,7 @@ const Signup = () => {
           </button>
             <p className="text-[#101828] hidden sm:block text-sm">
               Already have an account?
-              <a href="/auth/login" className="text-[#3538CD] text-sm font-semibold pl-1">
+              <a href="/login" className="text-[#3538CD] text-sm font-semibold pl-1">
                 Login
               </a>
             </p>
@@ -118,9 +119,9 @@ const Signup = () => {
         <div>
             <p className="text-[#101828] sm:hidden mt-[52px] text-sm">
               Already have an account?
-              <a href="" className="text-[#3538CD] text-sm font-semibold pl-1">
+              <Link href="/login" className="text-[#3538CD] text-sm font-semibold pl-1">
                 Login
-              </a>
+              </Link>
             </p>
           </div>
       </div>
